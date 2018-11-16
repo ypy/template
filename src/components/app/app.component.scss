@@ -2,6 +2,16 @@
     background: url("../../assets/images/IMG_20180821_1915211.jpg") no-repeat center center;
     background-size: cover;
   }
+  nav{
+    display: flex !important;
+  }
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
   
   .top-nav-collapse {
     background-color: #3949ab !important;
@@ -16,6 +26,15 @@
       background: #3949ab !important;
     }
   }
+
+@media (min-width: 600px){
+  .navbar.scrolling-navbar {
+      -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+      transition: background .5s ease-in-out,padding .5s ease-in-out;
+      padding-top: 12px;
+      padding-bottom: 12px;
+  }
+}
   
   #intro .h6 {
     font-weight: 300;
