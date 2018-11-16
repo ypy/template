@@ -1,0 +1,19 @@
+@function point($point) {
+  @return 8px * $point;
+}
+
+@mixin marginWithPoint($point, $direction:null) {
+  @if ($direction) {
+    margin-#{$direction}: point($point);
+  } @else {
+    margin: point($point);
+  }
+}
+
+@mixin paddingWithPoint($point, $direction:null) {
+  @if ($direction) {
+    padding-#{$direction}: point($point);
+  } @else {
+    padding: point($point);
+  }
+}

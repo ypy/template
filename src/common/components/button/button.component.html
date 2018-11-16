@@ -1,0 +1,16 @@
+<button class="btn"
+        mat-raised-button
+        *ngIf="!isLoading"
+        [class.lg]="size == 'lg'"
+        [class.md]="size == 'md'"
+        [class.has-icon]="!!icon"
+        [disabled]="disabled"
+        [color]="color"
+        (click)="onClick($event)">
+    <ng-content></ng-content>
+    <mat-icon *ngIf="!!icon">
+        {{icon}}
+    </mat-icon>
+</button>
+
+<bt-spinner *ngIf="isLoading"></bt-spinner>

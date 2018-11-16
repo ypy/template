@@ -1,0 +1,46 @@
+@import "../../../assets/styles/tools/points";
+@import "../../../assets/styles/variables/colors";
+
+ig-button {
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    display: block;
+    width: 100%;
+    line-height: 4rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    text-align: center;
+    text-transform: uppercase;
+    &.lg{
+      padding: 1rem 2rem;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &:focus, &:active {
+      outline: none;
+    }
+
+    &.has-icon {
+      text-align: left;
+
+      mat-icon {
+        color: white;
+        float: right;
+        line-height: 4rem;
+      }
+    }
+
+    .mat-button-wrapper {
+      color: white;
+      span{
+        float: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<mat-form-field>
+    <mat-placeholder>
+        {{label}}
+    </mat-placeholder>
+
+    <input #inputElement
+           *ngIf="type !== 'textArea'"
+           matInput
+           autocomplete="off"
+           [type]="inputType"
+           [(ngModel)]="value"
+           [disabled]="disabled"
+           [igOnlyIntegerInput]="type === 'number'"
+           [igOnlyFloatInput]="type === 'float'"
+           [minValue]="minValue"
+           [maxValue]="maxValue"
+           [decimalPlaces]="decimalPlaces"
+           [setValue]="setValue"
+           (blur)="onBlur()"
+           [required]="isRequired"/>
+
+    <textarea matInput
+              *ngIf="type === 'textArea'"
+              placeholder="Description"
+              [disabled]="disabled"
+              [(ngModel)]="command.description">
+    </textarea>
+</mat-form-field>
+
+<mat-error *ngIf="!hideValidationMessages && isDirty && !!errorMessage">
+    {{errorMessage}}
+</mat-error>

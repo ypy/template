@@ -1,0 +1,23 @@
+.modal {
+  position: relative;
+  text-align: center;
+
+  .close-button {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    cursor: pointer;
+  }
+
+  .main-icon {
+    display: block;
+    font-size: 80px;
+    width: 80px;
+    height: 80px;
+    margin: 2rem auto;
+
+    &.error {
+      color: red;
+    }
+  }
+}

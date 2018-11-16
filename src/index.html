@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Demo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <app-root><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100px"
+      height="100px" viewBox="0 0 100 100">
+
+      <g id="spinner">
+        <g id="bit6">
+          <g id="bit3">
+            <line id="bit" x1="50" y1="25" x2="50" y2="10" stroke-linecap="round" stroke-width="10" stroke="#000000"
+              fill="none" />
+            <use xlink:href="#bit" opacity="0.8" transform="rotate(-30 50 50)" />
+            <use xlink:href="#bit" opacity="0.64" transform="rotate(-60 50 50)" />
+          </g>
+          <use xlink:href="#bit3" opacity="0.512" transform="rotate(-90 50 50)" />
+        </g>
+        <use xlink:href="#bit6" opacity="0.262" transform="rotate(-180 50 50)" />
+      </g>
+
+      <script type="text/script">
+     
+  
+      var rot = 0;
+
+        function spinStep() {
+          rot += 30;
+          var spinner = document.getElementById("spinner");
+          spinner['transform']='rotate(' + rot + ',50,50)';
+        }
+        setInterval(spinStep, 30);
+      </script>
+    </svg></app-root>
+</body>
+</html>

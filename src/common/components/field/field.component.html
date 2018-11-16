@@ -1,0 +1,17 @@
+<label  (click)="onFocus()" [hidden]="isFocused || value?.length > 0">
+    {{label}}
+</label>
+
+<input title="field"
+       [(ngModel)]="value"
+       [formControl]="formControl"
+       [attr.type]="type"
+       [readonly]="readonly"
+       (focus)="onFocus()"
+       (blur)="onBlur()"/>
+
+<mat-icon *ngIf="!!icon">{{icon}}</mat-icon>
+
+<div class="error-text" *ngIf="!!errorText">
+    {{errorText}}
+</div>
