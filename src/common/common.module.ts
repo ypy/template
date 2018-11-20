@@ -24,6 +24,7 @@ import { ColumnComponent } from './components/grid/column/column.component';
 import { MatFieldComponent } from './components/mat.field/mat.field.component';
 import { SpinnerComponent } from './components/spinner/spinner.component'
 import { EmptyRouterLinkDirective } from './directives/empty.router.link/empty.router.link.directive';
+import { WeatherComponent } from './../components/weather/weather.component';
 
 const COMMON_COMPONENTS = [
     ContentComponent,
@@ -38,6 +39,7 @@ const COMMON_COMPONENTS = [
     OnlyFloatInputDirective,
     VisibilityHiddenDirective,
     EmptyRouterLinkDirective,
+    WeatherComponent
 ];
 
 const THIRD_PARTY_MODULES = [

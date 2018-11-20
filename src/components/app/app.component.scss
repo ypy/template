@@ -46,7 +46,7 @@
   
   .hm-gradient .full-bg-img {
     background: rgba(42, 27, 161, 0.7);
-    background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: linear-gradient(45deg, rgba(42, 27, 161, 0.3), rgba(29, 210, 177, 0.3) 100%);
   }
   
   @media (max-width: 450px) {
@@ -115,6 +115,9 @@
   -ms-flex-item-align: start;
   align-self: flex-start;
   overflow: visible;
+  color: #ffffff;
+  font-size: x-large;
+  text-decoration: none;
 }
 
 .navbar-dark .navbar-brand {
@@ -177,10 +180,15 @@
   a{
     transition: .35s;
     color: #ffffff;
+    text-decoration: none;
+    font-size: x-large;
   }
 }
 
-
+.content{
+  display: flex;
+  align-items: center;
+}
 
 @media (min-width: 576px){
 .container {

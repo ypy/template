@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <header class="full-height">
-  <nav class="navbar fixed-top scrolling-navbar" >
+  <nav class="navbar fixed-top scrolling-navbar" [ngClass]="{'top-nav-collapse':isScroll}">
     <div class="container">
       <a class="navbar-brand" href="#"><strong>Find self</strong></a>
       <div class="collapse navbar-collapse" id="navbarContent">
@@ -12,11 +12,12 @@
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
+      <app-weather></app-weather>
     </div>
   </nav>
   <section class="view hm-gradient full-height" id="intro">
       <div class="full-bg-img full-height d-flex align-items-center">
-        <div class="container full-height">
+        <div class="container content full-height">
           <div class="row no-gutters">
             <div class="col-md-10 col-lg-6 text-center text-md-left margins">
               <div class="white-text">

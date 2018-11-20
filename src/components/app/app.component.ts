@@ -10,10 +10,16 @@ export class AppComponent {
   constructor(@Inject(DOCUMENT) private document: any) {
 
   }
-
+  public isScroll = false;
   title = 'demo';
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    console.log(this.document.body.scrollTop);
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event) {
+    const scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    if (scrollTop > 50) {
+      this.isScroll = true;
+    } else {
+      this.isScroll = false;
+    }
   }
 }
